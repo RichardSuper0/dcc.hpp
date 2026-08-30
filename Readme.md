@@ -13,9 +13,11 @@ Briefly explain how to compile or run the project :
 # Supported OS
 ```Windows``` and ```Linux``` 
 # For start the compilation run : 
+
 ```LINUX``` :
 cd dcc.hpp && chmod clear.sh && 
 ./clear.sh 
+
 ```WINDOWS``` :
 cd dcc.hpp && ./clear.bat
 
