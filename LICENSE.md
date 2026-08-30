@@ -1,4 +1,4 @@
-# Copyright (c) [ANNO] [IL TUO NOME O NICKNAME]
+# Copyright (c) 30/8/2026 - RichardSuper0 
 
 All rights reserved.
 
