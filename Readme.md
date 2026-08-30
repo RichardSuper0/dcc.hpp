@@ -13,9 +13,11 @@ Briefly explain how to compile or run the project :
 # Supported OS
 ```Windows``` and ```Linux``` 
 # For start the compilation run : 
-git clone https://github.com/RichardSuper0/dcc.hpp/DCC.git &&
-cd dcc.hpp && cd DCC && chmod build.sh && 
-./build.sh 
+# LINUX :
+cd dcc.hpp && chmod clear.sh && 
+./clear.sh 
+# WINDOWS :
+cd dcc.hpp && ./clear.bat
 
 ## ⚠️ License and Mandatory Rules for Forks
 
