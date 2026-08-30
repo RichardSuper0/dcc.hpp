@@ -13,10 +13,10 @@ Briefly explain how to compile or run the project :
 # Supported OS
 ```Windows``` and ```Linux``` 
 # For start the compilation run : 
-# LINUX :
+```LINUX``` :
 cd dcc.hpp && chmod clear.sh && 
 ./clear.sh 
-# WINDOWS :
+```WINDOWS``` :
 cd dcc.hpp && ./clear.bat
 
 this script will rename the folder dcc.hpp into DCC and will delete Readme.md and LICENSE.md 
