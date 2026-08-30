@@ -18,6 +18,3 @@ Briefly explain how to compile or run the project (FULL LLVM TOOLCHAIN AND HAVIN
 The source code of **DiscordC++** is released under a **Custom License**. In order to protect the integrity of the original project and prevent users from being confused by unauthorized clones, the following restrictions apply.
 
 To review the license and usage constraints, please refer to the LICENSE.md file in the main root of the repository.
-```
-
-Se vuoi, posso aiutarti a trasformare la riga sui requisiti (quella tra parentesi sulla Toolchain LLVM e il Terminale) in una lista puntata più pulita e professionale in inglese, oppure possiamo procedere con un altro file. Come preferisci andare avanti?
