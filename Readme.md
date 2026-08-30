@@ -19,6 +19,8 @@ cd dcc.hpp && chmod clear.sh &&
 # WINDOWS :
 cd dcc.hpp && ./clear.bat
 
+this script will rename the folder dcc.hpp into DCC and will delete Readme.md and LICENSE.md 
+
 ## ⚠️ License and Mandatory Rules for Forks
 
 The source code of **DiscordC++** is released under a **Custom License**. In order to protect the integrity of the original project and prevent users from being confused by unauthorized clones, the following restrictions apply.
