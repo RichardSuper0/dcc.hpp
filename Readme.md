@@ -13,7 +13,7 @@ Briefly explain how to compile or run the project :
 # Supported OS
 ```Windows``` and ```Linux``` 
 # For start the compilation run : 
-git clone https://github.com/RichardSuper0/dcc.hpp &&
+git clone https://github.com/RichardSuper0/dcc.hpp/DCC.git &&
 cd dcc.hpp && cd DCC && chmod build.sh && 
 ./build.sh 
 
