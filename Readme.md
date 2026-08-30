@@ -9,9 +9,13 @@ A powerful and optimized C++ library/application designed to interact with the D
 
 ## 🛠️ Requirements & Installation
 Briefly explain how to compile or run the project :
-```FULL LLVM TOOLCHAIN AND HAVING A TERMINAL + PATHS SET```
+```FULL LLVM TOOLCHAIN AND HAVING A TERMINAL + PATHS SET + GIT```
 # Supported OS
 ```Windows``` and ```Linux``` 
+# For start the compilation run : 
+git clone https://github.com/RichardSuper0/dcc.hpp &&
+cd dcc.hpp && cd DCC && chmod build.sh && 
+./build.sh 
 
 ## ⚠️ License and Mandatory Rules for Forks
 
