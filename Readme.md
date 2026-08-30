@@ -8,8 +8,8 @@ A powerful and optimized C++ library/application designed to interact with the D
 * **Safe & Stable:** Optimized to process continuous data streams without interruptions.
 
 ## 🛠️ Requirements & Installation
-Briefly explain how to compile or run the project (FULL LLVM TOOLCHAIN AND HAVING A TERMINAL + PATHS SET).
-
+Briefly explain how to compile or run the project :
+```FULL LLVM TOOLCHAIN AND HAVING A TERMINAL + PATHS SET```
 # Supported OS
 ```Windows``` and ```Linux``` 
 
