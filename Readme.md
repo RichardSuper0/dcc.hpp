@@ -21,7 +21,7 @@ cd dcc.hpp && chmod clear.sh &&
 ```WINDOWS``` :
 cd dcc.hpp && ./clear.bat
 
-this script will rename the folder dcc.hpp into DCC and will delete Readme.md and LICENSE.md 
+this script will rename the folder dcc.hpp into DCC and will delete Readme.md and LICENSE.md and if the script is clear.bat delete clear.sh, else clear.sh will delete clear.bat
 
 ## ⚠️ License and Mandatory Rules for Forks
 
