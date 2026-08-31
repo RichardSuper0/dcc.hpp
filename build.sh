@@ -28,17 +28,17 @@ fi
 mkdir -p safe
 
 if command -v clang >/dev/null; then
-    clang $CFLAGS -c src/dcc.cpp -o safe/dcc.o
+    clang $CFLAGS -c dcc.cc -o safe/dcc.o
 else
-    gcc $CFLAGS -c src/dcc.cpp -o safe/dcc.o
+    gcc $CFLAGS -c dcc.cc -o safe/dcc.o
 fi
 
 > dcc.hpp
 
 if command -v clang >/dev/null; then
-    clang -E include/main.hpp >> dcc.hpp
+    clang -E include/dcc.hpp >> dcc.hpp
 else
-    gcc -E include/main.hpp >> dcc.hpp
+    gcc -E include/dcc.hpp >> dcc.hpp
 fi
 
 rm -rf include src start.bat
