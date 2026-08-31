@@ -3,28 +3,31 @@
 A powerful and optimized C++ library/application designed to interact with the Discord API.
 
 ## 🚀 Features
-* **High Performance:** Developed entirely in C++ to ensure maximum speed and minimal memory footprint.
-* **Event Management:** Efficient system for handling Discord messages, commands, and interactions.
-* **Safe & Stable:** Optimized to process continuous data streams without interruptions.
+* High Performance
+* Event Management
+* Safe & Stable
 
-## 🛠️ Requirements & Installation
-Briefly explain how to compile or run the project :
-```FULL LLVM TOOLCHAIN AND HAVING A TERMINAL + PATHS SET + GIT```
-# Supported OS
-```Windows``` and ```Linux``` 
-# For start the compilation run : 
+## 🛠️ Requirements
+FULL LLVM TOOLCHAIN + TERMINAL + PATHS SET + GIT
 
-```LINUX``` :
-cd dcc.hpp && chmod clear.sh && 
-./clear.sh 
+## 🖥️ Supported OS
+Windows  
+Linux
 
-```WINDOWS``` :
-cd dcc.hpp && ./clear.bat
+## ▶️ Compilation Setup
 
-this script will rename the folder dcc.hpp into DCC and will delete Readme.md and LICENSE.md and if the script is clear.bat delete clear.sh, else clear.sh will delete clear.bat
+### Linux
+cd dcc.hpp  &&
+chmod +x clear.sh  &&
+./clear.sh
 
-## ⚠️ License and Mandatory Rules for Forks
+### Windows
+cd dcc.hpp &&
+clear.bat
 
-The source code of **DiscordC++** is released under a **Custom License**. In order to protect the integrity of the original project and prevent users from being confused by unauthorized clones, the following restrictions apply.
+These scripts rename dcc.hpp to DCC, remove README.md and LICENSE.md, and delete the opposite clear script.
 
-To review the license and usage constraints, please refer to the LICENSE.md file in the main root of the repository.
+## ⚠️ License & Fork Rules
+DiscordC++ uses a Custom License.  
+Forks must include (fork) or (fanmade), cannot be sold, and cannot claim authorship.  
+See LICENSE.md for details.
