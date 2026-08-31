@@ -11,6 +11,4 @@ fi
 if [ -f "build.sh" ]; then
     chmod +x build.sh
     exec ./build.sh clear.sh
-else
-    rm -- "$0"
 fi
