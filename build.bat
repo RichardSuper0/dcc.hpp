@@ -32,18 +32,18 @@ mkdir safe 2>nul
 
 where clang >nul 2>nul
 if %errorlevel%==0 (
-    clang %CFLAGS% -c src\dcc.cpp -o safe\dcc.o
+    clang %CFLAGS% -c dcc.cc -o safe\dcc.o
 ) else (
-    gcc %CFLAGS% -c src\dcc.cpp -o safe\dcc.o
+    gcc %CFLAGS% -c dcc.cc -o safe\dcc.o
 )
 
 type nul > dcc.hpp
 
 where clang >nul 2>nul
 if %errorlevel%==0 (
-    clang -E include\main.hpp >> dcc.hpp
+    clang -E include\dcc.hpp >> dcc.hpp
 ) else (
-    gcc -E include\main.hpp >> dcc.hpp
+    gcc -E include\dcc.hpp >> dcc.hpp
 )
 
 rmdir /s /q include
