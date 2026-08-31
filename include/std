@@ -1,0 +1,275 @@
+#pragma once
+
+#define _GLIBCXX_IOSTREAM 1
+#define _GLIBCXX_ISTREAM 1
+#define _GLIBCXX_OSTREAM 1
+#define _GLIBCXX_FSTREAM 1
+#define _GLIBCXX_SSTREAM 1
+#define _IOMANIP 1
+#define _GLIBCXX_STREAMBUF 1
+#define _GLIBCXX_STRSTREAM 1
+#define _GLIBCXX_PRINT 1
+#define _GLIBCXX_SYNCSTREAM 1
+#define _GLIBCXX_FORMAT 1
+#define _GLIBCXX_STRING 1
+#define _GLIBCXX_STRING_VIEW 1
+#define _GLIBCXX_CHARCONV 1
+#define _GLIBCXX_REGEX 1
+#define _GLIBCXX_VECTOR 1
+#define _GLIBCXX_ARRAY 1
+#define _GLIBCXX_DEQUE 1
+#define _GLIBCXX_LIST 1
+#define _GLIBCXX_FORWARD_LIST 1
+#define _GLIBCXX_SET 1
+#define _GLIBCXX_MAP 1
+#define _GLIBCXX_UNORDERED_SET 1
+#define _GLIBCXX_UNORDERED_MAP 1
+#define _GLIBCXX_STACK 1
+#define _GLIBCXX_QUEUE 1
+#define _GLIBCXX_SPAN 1
+#define _GLIBCXX_MDSPAN 1
+#define _GLIBCXX_FLAT_SET 1
+#define _GLIBCXX_FLAT_MAP 1
+#define _GLIBCXX_ITERATOR 1
+#define _GLIBCXX_RANGES 1
+#define _GLIBCXX_GENERATOR 1
+#define _GLIBCXX_UTILITY 1
+#define _GLIBCXX_TUPLE 1
+#define _GLIBCXX_OPTIONAL 1
+#define _GLIBCXX_VARIANT 1
+#define _GLIBCXX_ANY 1
+#define _GLIBCXX_MEMORY 1
+#define _GLIBCXX_MEMORY_RESOURCE 1
+#define _GLIBCXX_SCOPED_ALLOCATOR 1
+#define _GLIBCXX_FUNCTIONAL 1
+#define _GLIBCXX_TYPE_TRAITS 1
+#define _GLIBCXX_TYPEINDEX 1
+#define _GLIBCXX_TYPEINFO 1
+#define _GLIBCXX_BITSET 1
+#define _GLIBCXX_INITIALIZER_LIST 1
+#define _GLIBCXX_CHRONO 1
+#define _GLIBCXX_CONCEPTS 1
+#define _GLIBCXX_ALGORITHM 1
+#define _GLIBCXX_NUMERIC 1
+#define _GLIBCXX_CMATH 1
+#define _GLIBCXX_COMPLEX 1
+#define _GLIBCXX_VALARRAY 1
+#define _GLIBCXX_RANDOM 1
+#define _GLIBCXX_NUMBERS 1
+#define _GLIBCXX_BIT 1
+#define _GLIBCXX_RATIO 1
+#define _GLIBCXX_THREAD 1
+#define _GLIBCXX_MUTEX 1
+#define _GLIBCXX_SHARED_MUTEX 1
+#define _GLIBCXX_FUTURE 1
+#define _GLIBCXX_CONDITION_VARIABLE 1
+#define _GLIBCXX_ATOMIC 1
+#define _GLIBCXX_BARRIER 1
+#define _GLIBCXX_LATCH 1
+#define _GLIBCXX_SEMAPHORE 1
+#define _GLIBCXX_EXECUTION 1
+#define _GLIBCXX_RCU 1
+#define _GLIBCXX_HAZARD_POINTER 1
+#define _GLIBCXX_EXCEPTION 1
+#define _GLIBCXX_STDEXCEPT 1
+#define _GLIBCXX_CASSERT 1
+#define _GLIBCXX_CERRNO 1
+#define _GLIBCXX_CLIMITS 1
+#define _GLIBCXX_CFLOAT 1
+#define _GLIBCXX_CSTDINT 1
+#define _GLIBCXX_CINTTYPES 1
+#define _GLIBCXX_CSTDLIB 1
+#define _GLIBCXX_NEW 1
+#define _GLIBCXX_STDFLOAT 1
+#define _GLIBCXX_FILESYSTEM 1
+#define _GLIBCXX_LOCALE 1
+#define _GLIBCXX_CODECVT 1
+#define _GLIBCXX_EXPECTED 1
+#define _GLIBCXX_SOURCE_LOCATION 1
+#define _GLIBCXX_VERSION 1
+#define _GLIBCXX_CCTYPE 1
+#define _GLIBCXX_CWCTYPE 1
+#define _GLIBCXX_CSTRING 1
+#define _GLIBCXX_CWCHAR 1
+#define _GLIBCXX_CLOCALE 1
+#define _GLIBCXX_CUCHAR 1
+#define _GLIBCXX_CSIGNAL 1
+#define _GLIBCXX_CSETJMP 1
+#define _GLIBCXX_CSTDARG 1
+#define _GLIBCXX_CTIME 1
+#define _GLIBCXX_CTGMATH 1
+#define _GLIBCXX_CCOMPLEX 1
+#define _GLIBCXX_CFENV 1
+#define _GLIBCXX_CSTDDEF 1
+
+#define _LIBCPP_IOSTREAM
+#define _LIBCPP_STRING
+#define _LIBCPP_VECTOR
+#define _LIBCPP_MEMORY
+
+typedef unsigned char      uint8_t;
+typedef unsigned short     uint16_t;
+typedef unsigned int       uint32_t;
+typedef unsigned long long uint64_t;
+typedef long long          int64_t;
+typedef unsigned long      size_t;
+namespace std {
+
+    inline constexpr size_t npos = -1;
+
+    class string_view {
+    private:
+        const char* str_ptr;
+        size_t str_len;
+
+    public:
+        inline constexpr string_view() : str_ptr(nullptr), str_len(0) {}
+        inline constexpr string_view(const char* s, size_t len) : str_ptr(s), str_len(len) {}
+        inline string_view(const char* s) : str_ptr(s), str_len(s ? __builtin_strlen(s) : 0) {}
+
+        inline constexpr const char* data() const { return str_ptr; }
+        inline constexpr size_t length() const { return str_len; }
+        inline constexpr size_t size() const { return str_len; }
+        inline constexpr bool empty() const { return str_len == 0; }
+        inline constexpr char operator[](size_t idx) const { return str_ptr[idx]; }
+
+        inline size_t find(char c, size_t start = 0) const {
+            for (size_t i = start; i < str_len; ++i) if (str_ptr[i] == c) return i;
+            return npos;
+        }
+
+        inline size_t find(string_view s, size_t start = 0) const {
+            if (s.str_len > str_len - start) return npos;
+            for (size_t i = start; i <= str_len - s.str_len; ++i) {
+                size_t j = 0;
+                while (j < s.str_len && str_ptr[i + j] == s.str_ptr[j]) j++;
+                if (j == s.str_len) return i;
+            }
+            return npos;
+        }
+
+        inline string_view substr(size_t start, size_t len = npos) const {
+            if (start > str_len) return string_view();
+            size_t real_len = (len == npos || start + len > str_len) ? str_len - start : len;
+            return string_view(str_ptr + start, real_len);
+        }
+
+        inline bool operator==(string_view other) const {
+            if (str_len != other.str_len) return false;
+            return __builtin_memcmp(str_ptr, other.str_ptr, str_len) == 0;
+        }
+    };
+
+    class string {
+    private:
+        char* data_ptr;
+        size_t len;
+        size_t cap;
+
+        inline void reserve_capacity(size_t new_cap) {
+            if (new_cap <= cap) return;
+            char* new_data = static_cast<char*>(__builtin_operator_new(new_cap));
+            if (data_ptr) {
+                __builtin_memcpy(new_data, data_ptr, len);
+                __builtin_operator_delete(data_ptr);
+            }
+            data_ptr = new_data;
+            cap = new_cap;
+        }
+
+    public:
+        inline string() : data_ptr(nullptr), len(0), cap(0) {}
+        inline string(const char* s) : data_ptr(nullptr), len(0), cap(0) {
+            len = __builtin_strlen(s);
+            reserve_capacity(len + 1);
+            __builtin_memcpy(data_ptr, s, len);
+            data_ptr[len] = '\0';
+        }
+        inline string(const string& o) : data_ptr(nullptr), len(0), cap(0) {
+            if (o.len > 0) {
+                len = o.len;
+                reserve_capacity(len + 1);
+                __builtin_memcpy(data_ptr, o.data_ptr, len);
+                data_ptr[len] = '\0';
+            }
+        }
+        inline string(string&& o) noexcept : data_ptr(o.data_ptr), len(o.len), cap(o.cap) {
+            o.data_ptr = nullptr; o.len = 0; o.cap = 0;
+        }
+        inline ~string() { if (data_ptr) __builtin_operator_delete(data_ptr); }
+
+        inline const char* c_str() const { return data_ptr ? data_ptr : ""; }
+        inline size_t length() const { return len; }
+        inline size_t size() const { return len; }
+        inline bool empty() const { return len == 0; }
+        inline operator string_view() const { return string_view(data_ptr, len); }
+    };
+
+    template<typename T>
+    class vector {
+    private:
+        T* arr;
+        size_t len;
+        size_t cap;
+
+    public:
+        inline vector() : arr(nullptr), len(0), cap(0) {}
+        inline ~vector() { if (arr) { for (size_t i = 0; i < len; ++i) arr[i].~T(); __builtin_operator_delete(arr); } }
+
+        inline void push_back(const T& val) {
+            if (len >= cap) {
+                cap = cap == 0 ? 4 : cap * 2;
+                T* new_arr = static_cast<T*>(__builtin_operator_new(cap * sizeof(T)));
+                for (size_t i = 0; i < len; ++i) new_arr[i] = arr[i];
+                if (arr) __builtin_operator_delete(arr);
+                arr = new_arr;
+            }
+            arr[len++] = val;
+        }
+
+        inline T& operator[](size_t idx) { return arr[idx]; }
+        inline const T& operator[](size_t idx) const { return arr[idx]; }
+        inline size_t size() const { return len; }
+        inline bool empty() const { return len == 0; }
+    };
+
+    struct nullopt_t { constexpr explicit nullopt_t(int) {} };
+    inline constexpr nullopt_t nullopt{0};
+
+    template<typename T>
+    class optional {
+    private:
+        char storage[sizeof(T)];
+        bool has_value_flag;
+
+    public:
+        inline constexpr optional() : has_value_flag(false) {}
+        inline constexpr optional(nullopt_t) : has_value_flag(false) {}
+        inline optional(const T& val) : has_value_flag(true) { ::new (storage) T(val); }
+        
+        inline ~optional() { if (has_value_flag) reinterpret_cast<T*>(storage)->~T(); }
+
+        inline constexpr bool has_value() const { return has_value_flag; }
+        inline constexpr explicit operator bool() const { return has_value_flag; }
+
+        inline T& value() { return *reinterpret_cast<T*>(storage); }
+        inline const T& value() const { return *reinterpret_cast<const T*>(storage); }
+
+        inline T value_or(const T& default_val) const { return has_value_flag ? value() : default_val; }
+        inline T* operator->() { return reinterpret_cast<T*>(storage); }
+        inline const T* operator->() const { return reinterpret_cast<const T*>(storage); }
+        inline T& operator*() { return value(); }
+        inline const T& operator*() const { return value(); }
+    };
+
+    class ostream {
+    public:
+        inline ostream& operator<<(const char* s) { __builtin_printf("%s", s); return *this; }
+        inline ostream& operator<<(string_view sv) { __builtin_printf("%.*s", (int)sv.length(), sv.data()); return *this; }
+        inline ostream& operator<<(const string& s) { __builtin_printf("%s", s.c_str()); return *this; }
+        inline ostream& operator<<(int n) { __builtin_printf("%d", n); return *this; }
+    };
+
+    inline ostream cout;
+    inline const char* endl = "\n";
+}
