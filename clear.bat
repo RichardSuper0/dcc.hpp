@@ -12,7 +12,4 @@ if exist dcc.hpp (
 if exist build.bat (
     start "" build.bat clear.bat
     exit
-) else (
-    del "%~f0"
-    pause
 )
